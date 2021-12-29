@@ -1,0 +1,83 @@
+import java.util.*;
+public class BubbleSortExample
+{
+    static void bubbleSort(int[] arr)
+    {
+        int n=arr.length;
+        int temp = 0;
+        for(int i=0; i<n; i++)
+        {
+            for(int j=1; j<(n-1); j++)
+            {
+                if(arr[j-1]>arr[j])
+                {
+                    temp = arr[j-1];
+                    arr[j-1]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+    }
+    public static void main(String args[])
+    {
+        int arr[]={3,60,50,52,20,35,98,65,53,100};
+        System.out.println("array before bubble sort");
+        for(int i=0; i< arr.length; i++)
+        {
+            System.out.print(arr[i]+ "");
+        }
+          System.out.println();
+           bubbleSort(arr);
+             System.out.println("array after bubble sort");
+               for(int i=0; i<arr.length; i++)
+           {
+                System.out.print(arr[i] + "");
+           }
+    }
+}
+output:
+array before bubble sort
+36050522035986553100
+array after bubble sort
+32035505253606598100
+program:
+import java.util.*;
+public class InsertionSortExample
+{
+    static void insertionSort(int array[])
+    {
+        int n=array.length;
+            for(int j=1; j<n; j++)
+            {
+                int key = array[j];
+                int i = j-1;
+                while((i>-1)&&(array[i]>key))
+                {
+                    array [i+1]=array[i];
+                    i--;
+                }
+                array[i+1]=key;
+            }
+    }
+    public static void main(String args[])
+    {
+        int[] arr1={3,60,50,52,20,35,98,65,53,100};
+        System.out.println(" before insertion sort");
+        for(int i:arr1)
+        {
+            System.out.print(i+ "");
+        }
+          System.out.println();
+           insertionSort(arr1);
+             System.out.println("after insertion sort");
+               for(int i:arr1)
+           {
+                System.out.print(i + "");
+           }
+    }
+}
+output:
+ before insertion sort
+36050522035986553100
+after insertion sort
+32035505253606598100
