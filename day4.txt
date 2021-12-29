@@ -1,0 +1,105 @@
+import java.util.*;
+import java.io.*;
+public class Program1
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+String a=sc.nextLine();
+String b=sc.nextLine();
+System.out.println(a.length());
+System.out.println(b.length());
+System.out.println(a.length()+b.length());
+int c=a.compareTo(b);
+if(c<0)
+{
+Ssystem.out.println("no");
+}
+else 
+{
+System.out.println("yes");
+}
+System.out.println(a.substring(0,1).toUpperCase()+a.substring(1).toLowerCase()+" ");
+System.out.println(b.substring(0,1).toUpperCase()+b.substring(1).toLowerCase());
+}
+}
+output:
+hello
+java
+5
+4
+9
+no
+Hello
+Java
+                             program2:
+import java.io.*;
+import java.util.*;
+public class Program2
+   {
+    public static void main(String[] args)
+   {
+  Scanner sc=new Scanner(System.in);
+   String s=sc.nextLine();
+   int a=sc.nextInt();
+   int b =sc.nextInt();
+  System.out.println(s.substring(a,b));
+}
+}
+output:
+helloworld
+3
+7
+lowo
+                                   program3:
+import java.util.*;
+import java.io.*;
+public class Program3
+{
+    public static void main(String[] args)
+    {
+      Scanner sc=new Scanner(System.in);
+      String s1=sc.nextLine();
+      String s2=sc.nextLine();
+      boolean status=true;
+     {
+         if(status)
+    {
+        System.out.println("anagrams");
+    }
+    else
+    {
+        System.out.println("not anagrams");
+    }
+   }
+}
+}
+output:
+hello
+hello
+anagram
+                                 program 4:
+import java.util.*;
+import java.io.*;
+public class Program4
+{
+     public static void main(String args[])
+    {
+        String original,reverse="";
+        Scanner sc=new Scanner(System.in);
+       original=sc.nextLine();
+       int length=original.length();
+       for(int i=length-1; i>=0; i--)
+       reverse=reverse+original.charAt(i);
+       if(original.equals(reverse))
+        System.out.println("palindrome");
+        else
+        System.out.println("not palindrome");
+    }
+}
+output:
+madam
+palindrome
+program5:
+29
+prime number
