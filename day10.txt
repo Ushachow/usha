@@ -1,0 +1,88 @@
+import java.io.*;
+import java.util.Scanner;
+public class StringExample
+{
+    public static void main (String args[])
+    {
+        String s1 = "java";
+        char ch[]={'s','t', 'r','i','n','s'};
+        String s2= new String(ch);
+        String s3= new String("example");
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+    }
+}
+output:
+java
+strings
+example
+       program:
+import java.util.Scanner;
+public class StringLength
+{
+    public static void main(String args[])
+    {
+        String s1 = "i love my family";
+        System.out.print(s1.length());
+    }
+}
+output:
+16
+   program:
+import java.util.Scanner;
+public class JavaExample
+{
+    public static void main(String args[])
+    {
+        String str1 = "true";
+        String str2 =  "false";
+        String str3 = "true";
+        boolean bool1 = Boolean.parseBoolean(str1);
+        boolean bool2 = Boolean.parseBoolean(str2);
+        boolean bool3 = Boolean.parseBoolean(str3);
+        System.out.println(bool1);
+        System.out.println(bool2);
+        System.out.println(bool3);
+    }
+}
+output:
+true
+false
+true 
+import java.util.*;
+ class day10
+  {
+   public static void main(String[] args)
+    {
+     Scanner sc=new Scanner(System.in);
+     String str=sc.next();
+     String str1=sc.next();
+     int n = sc.nextInt();
+     int m = sc.nextInt();
+     System.out.println("length of the string :"+str.length());
+     //char ch = sc.next().charAt(0);
+     System.out.println("character at particular index :"+str.charAt(n));
+     System.out.println(String.format(str));
+     System.out.println("sub string is :"+str.substring(1));
+     System.out.println("sub string at start index to end index :"+str.substring(n,m));
+     if(str.isEmpty())
+       System.out.println("is  empty");
+      else
+       System.out.println("is full");
+     System.out.println("adding the two Strings :"+str.concat(str1));
+     System.out.println("replaced the value :"+str.replace("str1","vidya")); 
+     if(str.equalsIgnoreCase(str1))
+       System.out.println("two strings are equals");
+      else
+       System.out.println("not equal");
+      System.out.println("split the string :"+str.split("r"));
+      System.out.println("covert into lower case :"+str.toLowerCase());
+      System.out.println("covert into upper case :"+str1.toUpperCase());
+      System.out.println("the intered string :"+str.intern());
+      String str2="  REDDY ";
+      System.out.println("removes the spaces :"+str2 .trim());
+
+     
+  }
+ }
