@@ -1,0 +1,232 @@
+import java.util.Scanner;
+public class Solid
+{
+    public static void main(String args[])
+    {
+        int rows,columns;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter the number of rows: ");
+        rows=sc.nextInt();
+        System.out.print("enter the number of columns: ");
+        columns=sc.nextInt();
+        for(int i=1; i<=rows; i++)
+        {
+            for(int j=1; j<=columns; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+    }
+}
+output:
+*****
+*****
+*****
+program:
+import java.util.Scanner;
+public class Hollow
+{
+    public static void print_rectangle(int n, int m)
+    {
+
+        for(int i=1; i<=n; i++)
+        {
+            for(int j=1; j<=m; j++)
+            {
+                if(i==1 || i==n|| j==1 || j==m)
+                System.out.print("*");
+                else
+                System.out.print(" ");
+            }
+            System.out.println();
+          }
+    }
+        public static void main(String args[])
+        {
+            int rows = 3, columns = 5;
+            print_rectangle (rows, columns);
+        }
+}
+output:
+*****
+*   *
+*****
+program:
+import java.util.Scanner;
+import java.io.*;
+public class Diamond
+{
+    public static void main(String args[])
+    {
+        int i,j,k;
+        Scanner sc=new Scanner(System.in);
+    System.out.print("enter the number of rows for full diamond: ");
+        int n=sc.nextInt();
+        for(i=0; i<n; i++)
+        {
+            for(j=0; j<n-i-1; j++)
+            {
+                System.out.print(" ");
+            }
+            for(k=0; k<2*i+1; k++)
+            {
+                System.out.println("*");
+            }
+            System.out.println("");
+        }
+        for(i=n-1; i>0; i--)
+        {
+            for(j=n-1; j>=i; j--)
+            {
+                System.out.print(" ");
+            }
+            for(k=2*i-1; k>0; k--)
+            {
+                System.out.print("*");
+            }
+            System.out.print("");
+        }
+    }
+}
+output:
+                 *
+             *    *
+           *    *    *
+         *   *    *    *
+       *   *   *     *    *
+       *   *   *     *    *
+           *   *    *    *
+              *     *    *
+                  *     *
+                       *
+program:
+import java.util.Scanner;
+import java.io.*;
+public class Half
+{
+    public static void main(String args[])
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter n:");
+        int n=sc.nextInt();
+        System.out.print("enter Sysmbol :");
+        char c =sc.next().charAt(0);
+        int i=1;
+        int j;
+        while(i<=n)
+        {
+            j=1;
+            while(j++<=i)
+            {
+                System.out.print(c);
+            }
+            System.out.println();
+            i++;
+        }
+        i=n-1;
+        while(i>0)
+        {
+                j=1;
+                while(j++<=i)
+                {
+                    System.out.print(c);
+                }
+                System.out.println();
+                i--;
+        }
+
+    } 
+}       
+ output:
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+program:
+import java.util.*;
+public class HollowDiamond
+{
+    public static void main(String args[])
+    {
+        int i,j;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter the number of rows");
+        int rows = sc.nextInt();
+        for(i=1; i<=rows; i++)
+        {
+            for(j=rows; j>i; j--)
+            {
+                System.out.print("  ");
+            }
+            System.out.print("*");
+            for(j=1; j<(i-1)*2; j++)
+            {
+                System.out.print("  ");
+            }
+            if(i==1)
+            {
+                System.out.print("\n");
+            }
+            else
+            {
+                System.out.print("*\n");
+            }
+        }
+        for(i=rows-1; i>=1; i--)
+        {
+            for(j=rows; j>i; j--)
+            {
+                System.out.print(" ");
+            }
+            System.out.print("*");
+            for(j=1; j<(i-1)*2; j++)
+            {
+                System.out.print(" ");
+            }
+            if(i==1)
+            {
+                System.out.print("\n");
+            }
+            else
+            {
+                System.out.print("*\n");
+            }
+        }
+    }
+}
+output:
+                 *
+                *  *
+              *      *        
+            *          *      
+          *              *    
+        *                  *  
+      *                      *
+    *                          *
+  *                              *
+*                                  *
+ *                                *
+  *                            *
+   *                          *
+    *                      *
+     *                   *
+      *                *
+       *             *
+        *          *
+               *
