@@ -1,0 +1,15 @@
+import java.io.BufferReader;
+class Test
+{
+    public static void main(String args[])
+    {
+        String mail="ushachowdary427@gmail.com";
+        String regex="[a-z]+@+[a-z]+\\.com";
+        if(mail.matches(regex))
+    System.out.println("email validation result : success!");
+      else
+          System.out.println("email validation result : failure!");
+    }
+}
+output:
+email validation result : failure!
