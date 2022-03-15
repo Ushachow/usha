@@ -1,0 +1,118 @@
+:import.java.util.Scanner;
+import java.util.Locale;
+class StringMethods
+{
+ public static void main(String args[])
+ {
+   Scanner sc = new Scanner(System.in);
+   System.out.println("enter the String1 ");
+   String str1 = sc.nextLine();
+   String str2 = sc.nextLine();
+   String english = str1.toLowerCase(Locale.forLanguageTag("en"));
+   String tasleem = str2.toUpperCase(Locale.forLanguageTag("en"));
+   System.out.println("length of string is   :"+str1.length());
+   System.out.println("sub String is   :"+str1.substring(6));
+   System.out.println("char is     :" +str1.charAt(6));
+   System.out.println("substring start and end is   :"+str2.substring(0,6));
+   System.out.println("replace string   :"+str1.replace(str1,str2));
+   System.out.println("join     :"+str1.join(str1,str2));
+   System.out.println("boolean     :"+str1.equals(str2));
+   System.out.println("empty or not     :"+str1.isEmpty());
+   System.out.println(" concatenates     :"+str1.concat(str2));
+   System.out.println("intern      :"+str2.intern());
+   System.out.println("int index of   :"+str1.indexOf(2));
+   System.out.println("lower case     :"+str1.toLowerCase());
+   System.out.println("locale    :"+ english);
+   System.out.println("upper case    "+str1.toUpperCase());
+   System.out.println("upper locale       :"+ tasleem);
+   System.out.println("trim           :"+str1.trim());
+   System.out.println("format       :"+String.format(str1));
+   System.out.println("split the string :"+str1.split("r"));
+   System.out.println("the intered string :"+str1.intern());
+   if(str2.equalsIgnoreCase(str1))  {
+       System.out.println("two strings are equals");
+     } else {
+       System.out.println("not equal");
+      }
+    
+  
+   }
+}
+              flateamd collect
+import java.util.*;
+import java.io.*;
+import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+class Usha{
+    public static void main(String args[]){
+        List<String> list= Arrays.asList ("2","3","4","5");
+        List<String> list1=Arrays.asList("6","7","8");
+        List<String> list2=Arrays.asList("9","10");
+        List<List<String>> listOfList=Arrays.asList(list,list1,list2);
+        System.out.println(listOfList);
+        List<String>final_list = listOfList.stream().flatMap(List->List.stream()).collect(Collectors.toList());
+        System.out.println(final_list);
+
+       
+    }
+}
+output:
+[[2, 3, 4, 5], [6, 7, 8], [9, 10]]
+[2, 3, 4, 5, 6, 7, 8, 9, 10]
+                toarray
+import java.util.*;
+import java.util.stream.Stream;
+public class Toarray 
+{
+  public static void main(String args[])
+  {
+      Stream<String> list =Stream.of("aaa","bbb","ccc","ddd");
+      Object[] ar = list.toArray();
+     System.out.println(Arrays.toString(ar));
+  }   
+}
+output:
+[aaa, bbb, ccc, ddd]
+                       Max
+import java.util.*;
+class Max{
+    public static void main(String args[]){
+        List<Integer> list =Arrays.asList(4,7,9,3,0);
+       Integer var= list.stream().max(Integer::compare).get();
+       System.out.println(var);
+    }
+}
+output:
+9
+    Min
+import java.util.*;
+class Min{
+    public static void main(String args[]){
+        List<Integer> list =Arrays.asList(4,7,9,3,0);
+       Integer var= list.stream().min(Integer::compare).get();
+       System.out.println(var);
+    }
+}
+output:
+0
+      sql
+SELECT EMPNO, SAL
+FROM EMP
+WHERE SAL BETWEEN 9000 AND 15000;
+output:
+no data found
+                 3 program
+SELECT ENAME
+FROM EMP
+WHERE ENAME LIKE'_hn%';
+output:
+no data found
+             4 PROGRAM
+SELECT REPLACE(ENAME,'','-')
+FROM EMP
+OUTPUT:
+KING
+BLAKE
+CLARK
