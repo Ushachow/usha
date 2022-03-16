@@ -1,0 +1,291 @@
+import java.util.*;
+public class reversenumber
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int remainder;
+        int reverse=0;
+        int num = sc.nextInt();
+        sc.close();
+        while(num!=0)
+        {
+            remainder=num%10;
+            reverse=reverse*10+remainder;
+            num=num/10;
+        }
+        System.out.println("reverse number is :"+reverse);
+    }
+}
+output:
+134
+reverse number is :431
+  program
+import java.util.*;
+class Factors
+{
+    public static void main(String args[])
+    {
+        int number = 60;
+        System.out.print("factors of" +number+ "are:");
+        for(int i=1; i<number; i++)
+        {
+            if(number%i==0)
+            {
+                System.out.print(i +" ");
+            }
+        }
+    }
+}
+output:
+factors of60are:1 2 3 4 5 6 10 12 15 20 30 
+           program:
+import java.util.*;
+class Test {
+    
+    static void printFibonacciNumbers(int n)
+    {
+        int f1 = 0, f2 = 1, i;
+ 
+        if (n < 1)
+            return;
+        System.out.print(f1 + " ");
+        for (i = 1; i < n; i++)
+        {
+            System.out.print(f2 + " ");
+            int next = f1 + f2;
+            f1 = f2;
+            f2 = next;
+        }
+    }
+ 
+    // Driver Code
+    public static void main(String[] args)
+    {
+        printFibonacciNumbers(7);
+    }
+}
+output:
+0 1 1 2 3 5 8 
+             program:
+import java.util.*;
+import java.io.*;
+public class count
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        String str=sc.nextLine();
+        sc.close();
+        int count = 0;
+        for(int i=0; i<str.length(); i++)
+        {
+            char ch=str.charAt(i);
+            if(ch=='a'|| ch=='A'|| ch=='e'||ch=='E'||ch=='i'||ch=='I'||ch=='o'||ch=='O'||ch=='u'||ch=='U'||ch=='u'||ch=='s'||ch=='S')
+            {
+                count++;
+            }
+            else
+            {
+                count++;
+            }
+
+        }
+        System.out.println("vowels are :"+count);
+        System.out.println("consonents are :"+count);
+    }
+}
+output:
+usha
+vowels are :4
+consonents are :4
+    program:
+import java.util.*;
+public class largesmall {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int ar[]=new int[n];
+        
+        for(int i=0;i<n;i++)
+        {
+            ar[i]=sc.nextInt();
+
+        }
+        int largest=ar[0];
+        int smallest=ar[0];
+        for(int i=1;i<ar.length;i++)
+        {
+            if(ar[i]>largest)
+            {
+                largest=ar[i];
+            }
+            else
+            {
+                if(ar[i]<smallest)
+                {
+                    smallest=ar[i];
+                }
+            }
+        }
+        System.out.println("largest number "+largest);
+        System.out.println("smallest number "+smallest);
+
+    
+    }
+}
+output:
+4
+10
+26
+23
+25
+largest number 26
+smallest number 10
+       program:
+import java.util.*;
+class mouni
+{
+ public static void main(String args[])
+ {
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter the String :");
+  String str = sc.nextLine();
+  String str2 = " ";
+  for(int i=0;i<str.length();i++)
+  {
+   if(str.charAt(i)>64 && str.charAt(i)<=122)
+   str2 = str2+str.charAt(i);
+  }
+  System.out.println(str2);
+ }
+}
+output:
+usha
+ usha
+     program:
+import java.util.*;
+class Nonrepeat{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        for(int i=0;i<str.length();i++){
+            boolean unique=true;
+            for(int j=0;j<str.length();j++){
+                if(i!=j && str.charAt(i)==str.charAt(j)){
+                    unique=false;
+                    break;
+                }
+            }
+            if(unique){
+                System.out.println("Non repeated character is : "+str.charAt(i));
+            }
+        }
+    }
+}
+output:
+jyothiprakash
+Non repeated character is : j
+Non repeated character is : y
+Non repeated character is : o
+Non repeated character is : t
+Non repeated character is : i
+Non repeated character is : p
+Non repeated character is : r
+Non repeated character is : k
+Non repeated character is : s
+           program:
+import java.util.*;
+class Bubblesort{
+     static void bubbleSort(int[] arr) 
+ {  
+  int n = arr.length;  
+  int temp = 0;  
+  for(int i=0;i<n;i++)
+  {  
+   for(int j=1;j<(n-i);j++)
+   {  
+    if(arr[j-1] > arr[j])
+    {   
+     temp = arr[j-1];  
+     arr[j-1] = arr[j];  
+     arr[j] = temp;  
+    }  
+   }  
+  }  
+}  
+ public static void main(String[] args)
+ {  
+  int arr[] ={3,16,23,2,35,46,5};  
+  System.out.println("Array Before Bubble Sort");  
+  for(int i=0;i<arr.length;i++)
+  {  
+   System.out.print(arr[i] + " ");  
+  }  
+  System.out.println();  
+  bubbleSort(arr);
+  System.out.println("Array After Bubble Sort");  
+  for(int i=0; i < arr.length; i++)
+  {  
+   System.out.print(arr[i] + " ");  
+  }  
+ }  
+}
+output:
+3 16 23 2 35 46 5 
+Array After Bubble Sort
+2 3 5 16 23 35 46 
+                     program:
+import java.util.*;
+ 
+class Employee implements Comparable<Employee>
+{
+    private String name;
+    private int age;
+ 
+    public Employee(String name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+ 
+    @Override
+    public String toString()
+    {
+        return "{" +
+                    "name='" + name + '\'' +
+                    ", age=" + age +
+                    '}';
+    }
+ 
+    public String getName() {
+        return name;
+    }
+ 
+    public int getAge() {
+        return age;
+    }
+ 
+    @Override
+    public int compareTo(Employee o) {
+        return this.age - o.getAge();
+    }
+}
+ 
+class Main
+{
+    public static void main(String[] args)
+    {
+        List<Employee> employees = new ArrayList<>(Arrays.asList(
+                                            new Employee("John", 15),
+                                            new Employee("Sam", 20),
+                                            new Employee("Joe", 10)
+                                        ));
+ 
+        Collections.sort(employees);
+        System.out.println(employees);
+    }
+}
+output:
+[{name='Joe', age=10}, {name='John', age=15}, {name='Sam', age=20}]
