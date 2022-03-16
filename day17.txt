@@ -1,0 +1,208 @@
+import java.util.*;
+import java.io.*;
+class Common
+{
+    private static void FindCommonElement(String arr1[],String arr2[])
+    {
+        Set<String> set = new HashSet<>();
+        for(int i=0; i<arr1.length; i++)
+        {
+            for(int j=0; j<arr2.length; j++)
+           {
+            if(arr1[i] == arr2[j])
+             {
+                set.add(arr1[i]);
+                 break;
+              }
+
+            }
+        }
+         for (String i : set)
+      {
+          System.out.print(i + " ");
+       }
+    }
+     public static void main(String args[])
+ {
+     String arr1[] = { "lion", "monkey", "animal", "tiger"};
+     String arr2[] = { "peacock", "lion", "tiger","pig"};
+     System.out.println(Arrays.toString(arr1));
+     System.out.println(Arrays.toString(arr2));
+     System.out.print("Common Elements: ");
+     FindCommonElement(arr1, arr2);
+ }
+}
+output:
+[lion, monkey, animal, tiger]
+[peacock, lion, tiger, pig]
+Common Elements: tiger lion 
+                                 program:
+import java.util.*;
+class Day17{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int k=sc.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print("Box" +k+" ");
+                k++;
+                
+            }
+            System.out.println();
+        }
+    }
+}
+output:
+10
+4
+Box4 
+Box5 Box6 
+Box7 Box8 Box9 
+Box10 Box11 Box12 Box13 
+Box14 Box15 Box16 Box17 Box18 
+Box19 Box20 Box21 Box22 Box23 Box24 
+Box25 Box26 Box27 Box28 Box29 Box30 Box31 
+Box32 Box33 Box34 Box35 Box36 Box37 Box38 Box39
+Box40 Box41 Box42 Box43 Box44 Box45 Box46 Box47 Box48
+Box49 Box50 Box51 Box52 Box53 Box54 Box55 Box56 Box57 Box58
+                    program6
+import java.util.*;
+class Day176
+{
+    static void common(int arr[],int num)
+    {
+        for(int i=0; i<arr.length; i++)
+        {
+            for(int j=i+1; j<arr.length; j++)
+            {
+                if(arr[i]+arr[j]==num)
+                {
+                    System.out.println(arr[i]+"+"+arr[j]+"="+num);
+                }
+            }
+        }
+    }
+    public static void main(String args[])
+    {
+        common(new int[]{2,8,4},6);
+    }
+
+}
+output:
+2+4=6
+                   program:
+import java.util.*;
+public class Array
+{
+    public static void main(String args[])
+    {
+        int array[]={1,2,3,4,6};
+        int search=4;
+        int count=0;
+        for(int i=0; i<array.length; i++)
+        {
+            if (array[i]==search)
+            {
+                count+=1;
+            }
+        }
+        if(count==0)
+        {
+            System.out.println("number is not found");
+        }else
+           System.out.println("number isfound");
+           System.out.println("no.of occurences"+count);
+    }
+}
+output:
+number isfound
+no.of occurences1
+   program
+import java.util.*;
+
+import javax.lang.model.util.ElementScanner14;
+public class arrayfuzz
+{
+    static int array1(int arr[],int n)
+    {
+        for(int i=0; i<arr.length; i++)
+        {
+            if((arr[i]%3)==0)
+            {
+                System.out.print("Fizz");
+
+            }
+            else
+            if(arr[i]%5==0)
+            {
+                System.out.print("Buzz");
+            }
+            else
+            if((arr[i]%3)==0&&(arr[i]%5==0))
+            {
+                System.out.print("FizzBuzz");
+            }
+            else
+            System.out.print(arr[i]);
+            System.out.print(" ");
+
+        }
+        return 0;
+    }
+
+public static void main(String args[])
+{
+    array1(new int[]{1,2,3,4,5},5);
+  }
+}
+  output:
+  1 2 Fizz 4 Buzz 
+                program:
+import java.util.*;
+class Array5
+{
+  public static void main(String argss[])
+  {
+    int arr[]={12,32,23,44};
+    int sum=0;
+    int product=1;
+    for(int i=0;i<arr.length;i++)
+    {
+      sum+=arr[i];
+      product*=arr[i];
+    }
+  if(sum%2==0)
+   System.out.println("Sum of the elements:"+sum);
+  else
+   System.out.println("Product of the elements:"+product);
+  }
+}
+output:
+Product of the elements:388608
+           program:
+import java.util.*;
+public class small {
+    public static void main(String args[])
+    {
+        ArrayList<Integer> ar=new ArrayList<Integer>();
+        ar.add(23);
+        ar.add(76);
+        ar.add(21);
+        ar.add(5);
+        Integer m=ar.stream().max(Integer::compare).get();
+        Integer m1=ar.stream().min(Integer::compare).get();
+        System.out.println("maximum element "+m);
+        System.out.println("minimum element "+m1);
+        Integer[] arr=new Integer[ar.size()];
+        arr=ar.toArray(arr);
+        Arrays.sort(arr);
+        System.out.println("first occurence :"+arr[0]);
+        System.out.println("last occurence :"+arr[arr.length-1]);
+    }
+}
+      output:
+      maximum element 76
+minimum element 5
+first occurence :5
+last occurence :76
